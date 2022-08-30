@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+.container {
+  border: 1px solid black;
+  max-width: 1760px;
+  margin: 30px 20px;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.input-box #list-item-input {
+  min-width: 60%;
+  height: 30px;
+  padding: 0 20px;
+}
+.input-box #list-item-add-btn {
+  padding: 0 20px;
+}
+.input-box #list-item-add-btn:hover {
+  cursor: pointer;
+}
+
+.main-content-box {
+  display: flex;
+}
+.main-content-box .todo-list-box {
+  flex: 2;
+  padding: 0 20px 20px;
+}
+.main-content-box .todo-list-box .todo-list-title {
+  font-size: 1.3rem;
+}
+.main-content-box .todo-list-box .task-done {
+  text-decoration: line-through;
+}
+.main-content-box .todo-list-box .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-content-box .todo-list-box .list .item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.main-content-box .todo-list-box .list .item .check-item-box {
+  display: flex;
+  align-items: center;
+}
+.main-content-box .todo-list-box .list .item .check-item-box .check-item-img-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.main-content-box .todo-list-box .list .item .check-item-box .check-item-img-btn:hover {
+  cursor: pointer;
+}
+.main-content-box .todo-list-box .list .item .delete-item-box {
+  display: flex;
+  align-items: center;
+}
+.main-content-box .todo-list-box .list .item .delete-item-box .delete-item-img-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.main-content-box .todo-list-box .list .item .delete-item-box .delete-item-img-btn:hover {
+  cursor: pointer;
+}
+.main-content-box .todo-list-info-box {
+  flex: 1;
+  padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Indie Flower", cursive;
+  font-size: large;
+}
+
+/*# sourceMappingURL=styles.css.map */

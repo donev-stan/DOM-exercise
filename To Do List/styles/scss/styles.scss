@@ -1,0 +1,17 @@
+@use "./components/container.scss";
+@use "./components/input-box.scss";
+@use "./components/main-content-box.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Indie Flower", cursive;
+  font-size: large;
+}
+
+// #wrapper {
+//   display: flex;
+//   justify-content: center;
+// }

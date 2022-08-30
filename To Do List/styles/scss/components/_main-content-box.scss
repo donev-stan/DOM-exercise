@@ -1,0 +1,65 @@
+.main-content-box {
+  display: flex;
+
+  .todo-list-box {
+    flex: 2;
+    padding: 0 20px 20px;
+
+    .todo-list-title {
+      font-size: 1.3rem;
+    }
+
+    .task-done {
+      text-decoration: line-through;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .check-item-box {
+          display: flex;
+          align-items: center;
+
+          .check-item-img-btn {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 10px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .delete-item-box {
+          display: flex;
+          align-items: center;
+
+          .delete-item-img-btn {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 10px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .todo-list-info-box {
+    flex: 1;
+    padding: 20px;
+  }
+}
