@@ -27,8 +27,12 @@ elements.inputField().addEventListener("keydown", (event) => {
 
 // Button Search
 elements.inputBtn().addEventListener("click", () => {
-  addListItem(elements.inputField().value);
-  elements.inputField().value = "";
+  const inputText = elements.inputField().value.trim();
+
+  if (inputText) {
+    addListItem(inputText);
+    elements.inputField().value = "";
+  }
 });
 
 const savedTasks = JSON.parse(localStorage.getItem("tasks"));

@@ -3,7 +3,7 @@
   border: 1px solid rgb(124, 124, 124);
   box-shadow: 0px 1px 10px 1px rgb(124, 124, 124);
   max-width: 1600px;
-  margin: 30px 20px;
+  margin: auto;
 }
 
 .input-box {
@@ -153,6 +153,10 @@
   padding: 0;
   font-family: "Indie Flower", cursive;
   font-size: large;
+}
+
+#wrapper {
+  padding: 30px 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
