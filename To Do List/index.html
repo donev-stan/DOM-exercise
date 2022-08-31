@@ -25,56 +25,18 @@
           <div class="todo-list-box">
             <div class="todo-list-title">To Do List:</div>
             <div class="list">
-              <div class="item">
-                <div class="check-item-box">
-                  <img
-                    src="./images/unchecked.png"
-                    class="check-item-img-btn"
-                    data-checked="false"
-                  />
-                </div>
-                <div class="list-item-text">Do Homework</div>
-                <div class="delete-item-box">
-                  <img src="./images/delete.png" class="delete-item-img-btn" />
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="check-item-box">
-                  <img
-                    src="./images/unchecked.png"
-                    class="check-item-img-btn"
-                    data-checked="false"
-                  />
-                </div>
-                <div class="list-item-text">Do Homework</div>
-                <div class="delete-item-box">
-                  <img src="./images/delete.png" class="delete-item-img-btn" />
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="check-item-box">
-                  <img
-                    src="./images/unchecked.png"
-                    class="check-item-img-btn"
-                    data-checked="false"
-                  />
-                </div>
-                <div class="list-item-text">Do Homework</div>
-                <div class="delete-item-box">
-                  <img src="./images/delete.png" class="delete-item-img-btn" />
-                </div>
-              </div>
+              <!-- Items will be added dynamically here -->
             </div>
           </div>
 
           <div class="todo-list-info-box">
             <div class="completed-box">
-              <div class="completed-title">Completed Tasks: 5</div>
+              <img src="./images/completed.png" width="22px" height="22px" />
+              Completed Tasks: <span id="completed-tasks-result">0</span>
             </div>
-            <div class="not-completed">
-              <div class="not-completed-title">Not Completed Tasks: 5</div>
+            <div class="ongoing-box">
+              <img src="./images/ongoing.png" width="22px" height="22px" />
+              Not Completed Tasks: <span id="ongoing-tasks-result">0</span>
             </div>
           </div>
         </div>

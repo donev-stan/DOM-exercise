@@ -19,3 +19,18 @@
     }
   }
 }
+
+@media (max-width: 550px) {
+  .input-box {
+    flex-direction: column;
+    gap: 10px;
+
+    max-width: 80%;
+    margin: 0 auto;
+
+    #list-item-add-btn {
+      max-width: 150px;
+      margin: 0 auto;
+    }
+  }
+}

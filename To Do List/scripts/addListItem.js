@@ -1,11 +1,20 @@
 import attachEventListeners from "./attachEventListeners.js";
-import { images } from "./variables.js";
+import { images, incrementOngoingTasks } from "./variables.js";
 
 const addListItem = (todoText) => {
   const list = document.querySelector(".list");
 
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("item");
+
+  const deleteItemDiv = document.createElement("div");
+  deleteItemDiv.classList.add("delete-item-box");
+  itemDiv.appendChild(deleteItemDiv);
+
+  const deleteItemImgBtn = document.createElement("img");
+  deleteItemImgBtn.classList.add("delete-item-img-btn");
+  deleteItemImgBtn.src = images.deleteImgPath;
+  deleteItemDiv.appendChild(deleteItemImgBtn);
 
   const checkItemDiv = document.createElement("div");
   checkItemDiv.classList.add("check-item-box");
@@ -22,16 +31,9 @@ const addListItem = (todoText) => {
   listItemText.innerText = todoText;
   itemDiv.appendChild(listItemText);
 
-  const deleteItemDiv = document.createElement("div");
-  deleteItemDiv.classList.add("delete-item-box");
-  itemDiv.appendChild(deleteItemDiv);
-
-  const deleteItemImgBtn = document.createElement("img");
-  deleteItemImgBtn.classList.add("delete-item-img-btn");
-  deleteItemImgBtn.src = images.deleteImgPath;
-  deleteItemDiv.appendChild(deleteItemImgBtn);
-
   list.appendChild(itemDiv);
+
+  incrementOngoingTasks();
 
   attachEventListeners(checkItemImgBtn, deleteItemImgBtn);
 };

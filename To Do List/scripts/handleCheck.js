@@ -1,4 +1,10 @@
-import { images } from "./variables.js";
+import {
+  decrementDoneTasks,
+  decrementOngoingTasks,
+  images,
+  incrementDoneTasks,
+  incrementOngoingTasks,
+} from "./variables.js";
 
 const handleCheck = (imgBtn) => {
   const checked = imgBtn.dataset.checked;
@@ -11,9 +17,13 @@ const handleCheck = (imgBtn) => {
   if (isChecked) {
     imgBtn.src = images.checkedImgPath;
     text.classList.add("task-done");
+    incrementDoneTasks();
+    decrementOngoingTasks();
   } else {
     imgBtn.src = images.uncheckedImgPath;
     text.classList.remove("task-done");
+    decrementDoneTasks();
+    incrementOngoingTasks();
   }
 };
 
