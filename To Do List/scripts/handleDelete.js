@@ -1,7 +1,9 @@
-import { decrementDoneTasks } from "./variables.js";
+import { deleteLocalStorageTaskById } from "./localStorage.js";
+import { decrementDoneTasks, decrementOngoingTasks } from "./variables.js";
 
 const handleDelete = (target) => {
-  target.parentElement.parentElement.remove();
+  const wholeElement = target.parentElement.parentElement;
+  const taskId = wholeElement.querySelector(".task-id").dataset.id;
 
   const isChecked =
     target.parentElement.parentElement.querySelector(".check-item-img-btn")
@@ -10,6 +12,11 @@ const handleDelete = (target) => {
       : false;
 
   if (isChecked) decrementDoneTasks();
+  else decrementOngoingTasks();
+
+  wholeElement.remove();
+
+  deleteLocalStorageTaskById(taskId);
 };
 
 export default handleDelete;

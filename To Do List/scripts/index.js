@@ -30,3 +30,11 @@ elements.inputBtn().addEventListener("click", () => {
   addListItem(elements.inputField().value);
   elements.inputField().value = "";
 });
+
+const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+if (savedTasks) {
+  savedTasks.forEach(({ id, todoText, checked }) => {
+    addListItem(todoText, id, checked);
+  });
+}

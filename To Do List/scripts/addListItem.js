@@ -1,11 +1,24 @@
 import attachEventListeners from "./attachEventListeners.js";
-import { images, incrementOngoingTasks } from "./variables.js";
+import elements from "./elements.js";
+import generateTaskId from "./generateTaskId.js";
+import { pushTaskToLocalStorage } from "./localStorage.js";
+import {
+  images,
+  incrementDoneTasks,
+  incrementOngoingTasks,
+} from "./variables.js";
 
-const addListItem = (todoText) => {
+const addListItem = (todoText, idFromLocal, checkedFromLocal) => {
   const list = document.querySelector(".list");
 
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("item");
+
+  const itemIdDiv = document.createElement("div");
+  itemIdDiv.classList.add("task-id");
+  const taskId = generateTaskId();
+  itemIdDiv.dataset.id = idFromLocal ? idFromLocal : taskId;
+  itemDiv.appendChild(itemIdDiv);
 
   const deleteItemDiv = document.createElement("div");
   deleteItemDiv.classList.add("delete-item-box");
@@ -22,8 +35,10 @@ const addListItem = (todoText) => {
 
   const checkItemImgBtn = document.createElement("img");
   checkItemImgBtn.classList.add("check-item-img-btn");
-  checkItemImgBtn.src = images.uncheckedImgPath;
-  checkItemImgBtn.dataset.checked = false;
+  checkItemImgBtn.dataset.checked = checkedFromLocal ? true : false;
+  checkItemImgBtn.src = checkedFromLocal
+    ? images.checkedImgPath
+    : images.uncheckedImgPath;
   checkItemDiv.appendChild(checkItemImgBtn);
 
   const listItemText = document.createElement("div");
@@ -33,25 +48,12 @@ const addListItem = (todoText) => {
 
   list.appendChild(itemDiv);
 
-  incrementOngoingTasks();
+  checkedFromLocal ? incrementDoneTasks() : incrementOngoingTasks();
 
   attachEventListeners(checkItemImgBtn, deleteItemImgBtn);
+
+  if (!idFromLocal)
+    pushTaskToLocalStorage({ id: taskId, checked: false, todoText });
 };
 
 export default addListItem;
-
-/*
- <div class="item">
-    <div class="check-item-box">
-        <img
-        src="./images/unchecked.png"
-        class="check-item-img-btn"
-        data-checked="false"
-        />
-    </div>
-    <div class="list-item-text">Do Homework</div>
-    <div class="delete-item-box">
-        <img src="./images/delete.png" class="delete-item-img-btn" />
-    </div>
-</div>
-*/

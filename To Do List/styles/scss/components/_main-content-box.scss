@@ -26,7 +26,8 @@
         align-items: center;
         gap: 5px;
 
-        animation: itemEnter 0.5s ease 0s 1 normal forwards;
+        // animation: itemEnter 0.3s ease 0s 1 normal forwards;
+        animation: countEnter 1s ease 0s 1 normal forwards;
 
         .check-item-box {
           display: flex;
@@ -73,7 +74,7 @@
   .todo-list-info-box {
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    // justify-content: center;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
@@ -88,6 +89,10 @@
         margin-top: -15px;
         font-size: 2rem;
       }
+
+      .start-animation {
+        animation: countEnter 1s ease 0s 1 normal forwards;
+      }
     }
   }
 }
@@ -99,6 +104,16 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes countEnter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

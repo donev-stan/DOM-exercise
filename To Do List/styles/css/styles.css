@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 .container {
-  border: 1px solid black;
+  border: 1px solid rgb(124, 124, 124);
+  box-shadow: 0px 1px 10px 1px rgb(124, 124, 124);
   max-width: 1600px;
   margin: 30px 20px;
 }
@@ -59,7 +60,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  animation: itemEnter 0.5s ease 0s 1 normal forwards;
+  animation: countEnter 1s ease 0s 1 normal forwards;
 }
 .main-content-box .todo-list-box .list .item .check-item-box {
   display: flex;
@@ -94,7 +95,6 @@
 .main-content-box .todo-list-info-box {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
@@ -110,6 +110,10 @@
   margin-top: -15px;
   font-size: 2rem;
 }
+.main-content-box .todo-list-info-box .completed-box .start-animation,
+.main-content-box .todo-list-info-box .ongoing-box .start-animation {
+  animation: countEnter 1s ease 0s 1 normal forwards;
+}
 
 @keyframes itemEnter {
   0% {
@@ -117,6 +121,14 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes countEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media (max-width: 750px) {
