@@ -9,7 +9,7 @@ const displayTasksStatus = () => {
   }
 
   // Check if animation is needed for ongoing tasks
-  const ongoingTasksResult = elements.ongoingTasksResult();
+  const ongoingTasksResult = elements.ongoingTasksResult().textContent;
   if (ongoingTasksResult != getOngoingTasks()) {
     elements.ongoingTasksResult().classList.add("start-animation");
   }
