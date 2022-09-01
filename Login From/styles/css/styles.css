@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  height: 100vh;
+  position: relative;
+}
+#wrapper .login {
+  border: 3px solid brown;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrapper .login .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  min-width: 400px;
+  font-size: 1.5rem;
+}
+#wrapper .login .container form input {
+  height: 25px;
+  padding: 5px 15px;
+  font-size: 1rem;
+}
+#wrapper .login .container form .username-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#wrapper .login .container form .username-box .username-error-msg {
+  color: red;
+  font-size: 1rem;
+  align-self: flex-end;
+}
+#wrapper .login .container form .password-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#wrapper .login .container form .password-box .password-error-msg {
+  color: red;
+  font-size: 1rem;
+  align-self: flex-end;
+}
+#wrapper .login .container form .terms-and-conditions-box {
+  display: flex;
+  flex-direction: column;
+}
+#wrapper .login .container form .terms-and-conditions-box .terms-and-conditions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.1rem;
+}
+#wrapper .login .container form .terms-and-conditions-box .terms-and-conditions-container label,
+#wrapper .login .container form .terms-and-conditions-box .terms-and-conditions-container input {
+  cursor: pointer;
+}
+#wrapper .login .container form .terms-and-conditions-box .terms-error-msg-box {
+  align-self: center;
+}
+#wrapper .login .container form .terms-and-conditions-box .terms-error-msg-box .terms-error-msg {
+  color: red;
+  font-size: 1rem;
+}
+#wrapper .login .container form .login-btn-box {
+  display: flex;
+  justify-content: center;
+}
+#wrapper .login .container form .login-btn-box #login-btn {
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 7px 15px;
+  background-color: lightseagreen;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s;
+}
+#wrapper .login .container form .login-btn-box #login-btn:hover {
+  color: black;
+}
+
+/*# sourceMappingURL=styles.css.map */
