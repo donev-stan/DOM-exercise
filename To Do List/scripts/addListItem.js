@@ -1,5 +1,5 @@
 import attachEventListeners from "./attachEventListeners.js";
-import elements from "./elements.js";
+import elements from "./domElements.js";
 import generateTaskId from "./generateTaskId.js";
 import { pushTaskToLocalStorage } from "./localStorage.js";
 import {

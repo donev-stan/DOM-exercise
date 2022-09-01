@@ -1,4 +1,4 @@
-import elements from "./elements.js";
+import elements from "./domElements.js";
 import { getDoneTasks, getOngoingTasks } from "./variables.js";
 
 const displayTasksStatus = () => {
