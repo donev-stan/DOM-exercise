@@ -26,6 +26,13 @@
   height: 25px;
   padding: 5px 15px;
   font-size: 1rem;
+  border-radius: 0px;
+  transition: border 0.01s;
+  border: 1px solid #ccc;
+}
+#wrapper .login .container form .input-error {
+  transition: border 0.1s;
+  border: 2px solid red;
 }
 #wrapper .login .container form .username-box {
   display: flex;
