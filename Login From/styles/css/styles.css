@@ -57,8 +57,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   font-size: 1.1rem;
+}
+#wrapper .login .container form .terms-and-conditions-box .terms-and-conditions-container input {
+  width: 15px;
 }
 #wrapper .login .container form .terms-and-conditions-box .terms-and-conditions-container label,
 #wrapper .login .container form .terms-and-conditions-box .terms-and-conditions-container input {
