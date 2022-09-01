@@ -8,7 +8,7 @@
   position: relative;
 }
 #wrapper .login {
-  border: 3px solid brown;
+  box-shadow: 0px 1px 20px 0px lightseagreen;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -20,7 +20,7 @@
   gap: 20px;
   padding: 20px;
   min-width: 400px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 #wrapper .login .container form input {
   height: 25px;
@@ -33,6 +33,7 @@
   gap: 10px;
 }
 #wrapper .login .container form .username-box .username-error-msg {
+  display: none;
   color: red;
   font-size: 1rem;
   align-self: flex-end;
@@ -43,6 +44,7 @@
   gap: 10px;
 }
 #wrapper .login .container form .password-box .password-error-msg {
+  display: none;
   color: red;
   font-size: 1rem;
   align-self: flex-end;
@@ -66,6 +68,7 @@
   align-self: center;
 }
 #wrapper .login .container form .terms-and-conditions-box .terms-error-msg-box .terms-error-msg {
+  display: none;
   color: red;
   font-size: 1rem;
 }
@@ -84,7 +87,9 @@
   transition: all 0.3s;
 }
 #wrapper .login .container form .login-btn-box #login-btn:hover {
-  color: black;
+  box-shadow: 0px 1px 20px -5px rgb(90, 90, 90);
+  color: rgb(70, 70, 70);
+  text-shadow: 1px 1px 10px #ffffff;
 }
 
 /*# sourceMappingURL=styles.css.map */
