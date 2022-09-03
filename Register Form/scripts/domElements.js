@@ -6,6 +6,8 @@ const elements = {
 	telInput: () => document.getElementById("tel"),
 	lastNameInput: () => document.getElementById("last-name"),
 	firstNameInput: () => document.getElementById("first-name"),
+
+	box: () => document.querySelector(".register-form-box"),
 };
 
 const errorElements = {
