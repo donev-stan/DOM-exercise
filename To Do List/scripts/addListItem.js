@@ -1,5 +1,4 @@
 import attachEventListeners from "./attachEventListeners.js";
-import elements from "./domElements.js";
 import generateTaskId from "./generateTaskId.js";
 import { pushTaskToLocalStorage } from "./localStorage.js";
 import { images, incrementDoneTasks, incrementOngoingTasks } from "./variables.js";
@@ -63,7 +62,7 @@ const addListItem = (todoText, idFromLocal, checkedFromLocal) => {
 
 	checkedFromLocal ? incrementDoneTasks() : incrementOngoingTasks();
 
-	attachEventListeners(checkItemImgBtn, deleteItemImgBtn);
+	attachEventListeners(editItemImgBtn, deleteItemImgBtn, checkItemImgBtn);
 
 	if (!idFromLocal) pushTaskToLocalStorage({ id: taskId, checked: false, todoText });
 };
