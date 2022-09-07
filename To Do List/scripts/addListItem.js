@@ -10,12 +10,26 @@ const addListItem = (todoText, idFromLocal, checkedFromLocal) => {
 	const itemDiv = document.createElement("div");
 	itemDiv.classList.add("item");
 
+	// ID
 	const itemIdDiv = document.createElement("div");
 	itemIdDiv.classList.add("task-id");
 	const taskId = generateTaskId();
 	itemIdDiv.dataset.id = idFromLocal ? idFromLocal : taskId;
 	itemDiv.appendChild(itemIdDiv);
 
+	// Edit
+	const editItemDiv = document.createElement("div");
+	editItemDiv.classList.add("edit-item-box");
+	editItemDiv.classList.add("unselectable");
+	itemDiv.appendChild(editItemDiv);
+
+	const editItemImgBtn = document.createElement("img");
+	editItemImgBtn.classList.add("edit-item-img-btn");
+	editItemImgBtn.src = images.editImgPath;
+	editItemImgBtn.title = "Edit";
+	editItemDiv.appendChild(editItemImgBtn);
+
+	// Delete
 	const deleteItemDiv = document.createElement("div");
 	deleteItemDiv.classList.add("delete-item-box");
 	deleteItemDiv.classList.add("unselectable");
@@ -24,8 +38,10 @@ const addListItem = (todoText, idFromLocal, checkedFromLocal) => {
 	const deleteItemImgBtn = document.createElement("img");
 	deleteItemImgBtn.classList.add("delete-item-img-btn");
 	deleteItemImgBtn.src = images.deleteImgPath;
+	deleteItemImgBtn.title = "Delete";
 	deleteItemDiv.appendChild(deleteItemImgBtn);
 
+	// Check
 	const checkItemDiv = document.createElement("div");
 	checkItemDiv.classList.add("check-item-box");
 	checkItemDiv.classList.add("unselectable");
@@ -37,6 +53,7 @@ const addListItem = (todoText, idFromLocal, checkedFromLocal) => {
 	checkItemImgBtn.src = checkedFromLocal ? images.checkedImgPath : images.uncheckedImgPath;
 	checkItemDiv.appendChild(checkItemImgBtn);
 
+	// Text
 	const listItemText = document.createElement("div");
 	listItemText.classList.add("list-item-text");
 	listItemText.innerText = todoText;

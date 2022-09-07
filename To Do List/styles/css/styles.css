@@ -38,7 +38,7 @@
 }
 .main-content-box {
   display: flex;
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 .main-content-box .todo-list-box {
@@ -90,6 +90,18 @@
   border-radius: 10px;
 }
 .main-content-box .todo-list-box .list .item .delete-item-box .delete-item-img-btn:hover {
+  cursor: pointer;
+}
+.main-content-box .todo-list-box .list .item .edit-item-box {
+  display: flex;
+  align-items: center;
+}
+.main-content-box .todo-list-box .list .item .edit-item-box .edit-item-img-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.main-content-box .todo-list-box .list .item .edit-item-box .edit-item-img-btn:hover {
   cursor: pointer;
 }
 .main-content-box .todo-list-info-box {
